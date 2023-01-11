@@ -24,8 +24,9 @@ public class Summary {
         MBTI+=SN.judgeMBTI();
         MBTI+=TF.judgeMBTI();
         MBTI+=JP.judgeMBTI();
+        at.printQ();
         MBTI+=at.judgeMBTI();
-       reader.close();
+        reader.close();
 
     }
     public String getMBTI(){

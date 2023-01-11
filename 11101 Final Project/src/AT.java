@@ -2,12 +2,15 @@ public class AT extends Personality{
     private String Q;
 
     public AT(){
-        
+
     }
 
     public AT(String former_mbti, String latter_mbti) {
         super(former_mbti,latter_mbti);
         Q= "面臨選擇時，你傾向堅定果斷?\n"+"你是否為完美主義?\n"+"面對失敗，你感到畏懼?\n";
+    }
+    public void printQ(){
+        System.out.print(Q);
     }
     
     public void printAT() {

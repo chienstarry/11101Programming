@@ -26,6 +26,7 @@ public class Information{
 			infoArray = line.split(" ");
 			if(infoArray[0].equals(mbti)) {
 				part2 = infoArray[1];
+				break;
 			}
 		}
 		myReader.close();

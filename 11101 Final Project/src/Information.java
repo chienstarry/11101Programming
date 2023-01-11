@@ -24,8 +24,10 @@ public class Information{
 		while (myReader.hasNextLine()) {
 			line = myReader.nextLine();
 			infoArray = line.split(" ");
+			
 			if(infoArray[0].equals(mbti)) {
 				part2 = infoArray[1];
+				break;
 			}
 		}
 		myReader.close();

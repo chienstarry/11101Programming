@@ -1,16 +1,36 @@
-import java.util.File;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-public class Information extends Personality{
-	private String introduction = "";
 
-	public Information(String name, String personality) {
-		super(name, personality);
+public class Information{
+	private String part2 = "";
+	private String name = "";
+	private String mbti = "";
+
+	public Information() {
 	}
 
-	public String Stringformat(){
-		Scanner input = new Scanner(new File("introduction.txt"));
+	public void setName(String name){
+		this.name = name;
+	}
+
+	public String Stringformat(String MBTI) throws FileNotFoundException{
+		this.mbti = MBTI;
+		File myFile = new File("introduction.txt");
+		Scanner myReader = new Scanner(myFile);
+
+		String line = "";
+		String[] infoArray;
+		while (myReader.hasNextLine()) {
+			line = myReader.nextLine();
+			infoArray = line.split(" ");
+			if(infoArray[0].equals(mbti)) {
+				part2 = infoArray[1];
+			}
+		}
+		myReader.close();
 		
-		String result = String.format("%d, you are a %d. %d", name, personality, introduction);
+		String result = String.format("%d, you are a %d. %d", name, mbti, part2);
 		return result;
 	}
 }

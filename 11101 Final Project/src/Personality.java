@@ -20,14 +20,17 @@ public class Personality {
 	}
 	
 	public String judgeMBTI() {
-		Scanner output= new Scanner(System.in);
-		//y就屬於前一個n就屬於後一個
-		for(int i=0;i<3;i++) {
-			String answer=output.next();
-			if(answer.equals("Y")){former++;}
-			else if(answer.equals("N")) {latter++;}
+		try (Scanner output = new Scanner(System.in)) {
+			//y就屬於前一個n就屬於後一個
+			for(int i=0 ;i<3;i++) {
+				String answer=output.next();
+				if(answer.equals("Y")){former++;}
+				else if(answer.equals("N")) {latter++;}
+			}
+			if(former>latter) {return former_mbti;}
+			else {return latter_mbti;}
 		}
-		if(former>latter) {return former_mbti;}
-		else {return latter_mbti;}
 	}
+	
+
 }

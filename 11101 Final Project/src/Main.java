@@ -6,14 +6,14 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		Information info = new Information();
 		Summary sum = new Summary();
-		AT at=new AT();
+		Identity identity = new Identity();
 
 		System.out.println("Welcome to the MBTI test! Please answer the following questions to know yourself better.");
 		System.out.println("Please input your name: ");
 		info.setName(in.nextLine());
+		System.out.println("There are 15 questions. Please answer them with Y/N and seperate them with space.\n ");
 
 		sum.calculate();
-		at.printAT();
 
 		try {
 			info.Stringformat(sum.getMBTI());
@@ -21,6 +21,11 @@ public class Main {
 			System.out.println("exception");
 			e.printStackTrace();
 		}
+		
+		
+		identity.printAT(sum.getMBTI());
+
+		
 		System.out.println("Thank you for participating in this test!");
 		in.close();
 	}

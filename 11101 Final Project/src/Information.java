@@ -16,7 +16,7 @@ public class Information{
 
 	public String Stringformat(String MBTI) throws FileNotFoundException{
 		this.mbti = MBTI;
-		File myFile = new File("C:\Users\Chien Starry\Documents\政大\大一上\程式設計\11101Programming\11101 Final Project"+"introduction.txt");
+		File myFile = new File("introduction.txt");
 		Scanner myReader = new Scanner(myFile);
 
 		String line = ""; 

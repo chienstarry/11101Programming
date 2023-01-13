@@ -1,16 +1,13 @@
 public class Identity extends Personality{
     private String Q;
 
-    public Identity(){
-
-    }
+    public Identity(){}
 
     public Identity(String former_mbti, String latter_mbti) {
     	
         super(former_mbti,latter_mbti);
-        Q= "*面臨選擇時，你傾向堅定果斷?\n"+"*你是否為完美主義?\n"+"*面對失敗，你感到畏懼?\n";
-        
-        
+        Q= "*面臨選擇時，你傾向堅定果斷?\n"+"*你是否為完美主義?\n"+"*面對失敗，你感到畏懼?\n"; 
+
     }
     
     public void printQ(){
@@ -22,7 +19,7 @@ public class Identity extends Personality{
     public void printAT(String mbti) {
         
         if(mbti.endsWith("A")==true) {
-        	
+    
         	System.out.println("此外，A這類人熱衷於獨立地解決問題，不太在意別人的意見，更願意相信自己的直覺和能力。這些人了解自己，知道自己擅長什麼，並且能保持自信，正因如此，他們在表達自己觀點的時候從不猶豫。\n");
         
         }else{

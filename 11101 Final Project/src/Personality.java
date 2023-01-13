@@ -21,9 +21,11 @@ public class Personality {
 	
 	public String judgeMBTI() {
 		try (Scanner output = new Scanner(System.in)) {
-			//y就屬於前一個n就屬於後一個
+			// Use for loop to judge the three questions.
 			for(int i=0 ;i<3;i++) {
 				String answer=output.next();
+
+				// Once get the answers, the variables need to updated.
 				if(answer.equals("Y")){former++;}
 				else if(answer.equals("N")) {latter++;}
 			}

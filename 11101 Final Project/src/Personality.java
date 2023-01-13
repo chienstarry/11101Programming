@@ -20,7 +20,7 @@ public class Personality {
 	}
 	
 	public String judgeMBTI() {
-		try (Scanner output = new Scanner(System.in)) {
+		Scanner output = new Scanner(System.in);
 			// Use for loop to judge the three questions.
 			for(int i=0 ;i<3;i++) {
 				String answer=output.next();
@@ -33,6 +33,3 @@ public class Personality {
 			else {return latter_mbti;}
 		}
 	}
-	
-
-}

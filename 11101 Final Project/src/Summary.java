@@ -10,7 +10,7 @@ public class Summary {
     
     public void calculate() throws FileNotFoundException {
         // Read the questions' file.
-        File PFile = new File("D:\\OneDrive\\桌面\\111-1課程\\程式設計一\\11101Programming\\11101Programming\\11101 Final Project\\"+"questions.txt");
+        File PFile = new File("questions.txt");
         Scanner reader = new Scanner(PFile);
 
         // Set the corresponding traits to the yes&no options.

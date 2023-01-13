@@ -25,7 +25,7 @@ public class Personality {
 			for(int i=0 ;i<3;i++) {
 				String answer=output.next();
 
-				// Once get the answers, the variables need to updated.
+				// Once get the answers, the variables need to be updated.
 				if(answer.equals("Y")){former++;}
 				else if(answer.equals("N")) {latter++;}
 			}

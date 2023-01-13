@@ -28,7 +28,7 @@ public class Summary {
         	
         }
 
-        // Print out the questions and updated the testers' MBTI.
+        // Print out the questions and update the testers' MBTI.
 
         for(int j=0; j<3; j++) {System.out.println(questions.get(j));}
         MBTI += EI.judgeMBTI();

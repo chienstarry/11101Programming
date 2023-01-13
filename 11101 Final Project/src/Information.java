@@ -3,42 +3,38 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Information{
-	private String part2 = "";
+	private String description = "";
 	private String name = "";
 	private String mbti = "";
 
-	public Information() {
-	}
+	public Information() {}
 
 	public void setName(String name){
 		this.name = name;
 	}
 
-	public String Stringformat(String MBTI) throws FileNotFoundException{
+	public void Stringformat(String MBTI) throws FileNotFoundException{
 		this.mbti = MBTI;
+		// Read the file containing the descriptions of MBTI.
 		File myFile = new File("introduction.txt");
-		Scanner myReader = new Scanner(myFile);
+		Scanner myReader = new Scanner(myFile); 
 
-		String line = ""; 
-		//不用用成陣列
-		//直接以一列為單位來看，不須使用空格分開。直接把那列當作是一個字串，擷取第0~3個字串即可
-
+		// Create the variable to determine the corresponding description.
+		String line = "";
 		while (myReader.hasNextLine()) {
+			line = myReader.nextLine(); 
 			
-			line = myReader.nextLine(); //會讀到下一行
-			
+			// If the testers' MBTI equals the index, its description will be assigned to the variable, description.
 			if(line.substring(0, 4).equals(mbti.substring(0, 4))) {
-				part2 = line.substring(line.indexOf(" ") + 1);
+				description = line.substring(line.indexOf(" ") + 1);
 				break;
-				
 			}
 		}
 		
-		
 		myReader.close();
 		
-		String result = String.format("%s, you are a %s.\n%s", name, mbti, part2);
+		// Print out the result of MBTI.
+		String result = String.format("%s, you are a %s.\n%s", name, mbti, description);
 		System.out.println(result);
-		return result;
 	}
 }
